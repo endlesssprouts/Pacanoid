@@ -1808,6 +1808,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 50418095086727860, guid: 6e63b1b071d6646aaaedfaf75e9bb8f2,
         type: 2}
+      propertyPath: m_Mass
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 50418095086727860, guid: 6e63b1b071d6646aaaedfaf75e9bb8f2,
+        type: 2}
       propertyPath: m_LinearDrag
       value: 0
       objectReference: {fileID: 0}
