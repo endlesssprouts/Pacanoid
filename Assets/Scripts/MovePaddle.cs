@@ -4,22 +4,16 @@ using UnityEngine;
 
 public class MovePaddle : MonoBehaviour {
 
-    public float speed = 1f;
-    public string axis = "Horizontal";
+    private float paddleSpeed = 0.5f;
 
-    void FixedUpdate()
+
+    private Vector3 playerPos = new Vector3(-2.26f, -1.75f, 0);
+
+    void Update()
     {
-        float v = Input.GetAxisRaw(axis);
-        GetComponent<Rigidbody2D>().velocity = new Vector2(v, 0)* speed;
-    }
+        float xPos = transform.position.x + (Input.GetAxis("Horizontal") * paddleSpeed);
+        playerPos = new Vector3(Mathf.Clamp(xPos, -3.489f, 0.89f), -1.75f, 0f);
+        transform.position = playerPos;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    }
 }
