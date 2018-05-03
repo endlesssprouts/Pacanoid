@@ -71,6 +71,7 @@ MonoBehaviour:
   _paddleMovementSpeed: 3
   _minXPosition: -3.489
   _maxXPosition: 0.89
+  _indicatorHeight: 0.85
 --- !u!212 &212913371943434436
 SpriteRenderer:
   m_ObjectHideFlags: 1
