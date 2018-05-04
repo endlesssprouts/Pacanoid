@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Paddle : MonoBehaviour
 {
-	[SerializeField] private float _paddleMovementSpeed = 5f;
+	[SerializeField] private float _paddleMovementSpeed = 8f;
 
 	[SerializeField] private float _minXPosition = -3.489f;
 	[SerializeField] private float _maxXPosition = 0.89f;
