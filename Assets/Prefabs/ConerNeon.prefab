@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4752771722658372}
   - component: {fileID: 212346388105120956}
+  - component: {fileID: 60926402760093754}
   m_Layer: 0
   m_Name: ConerNeon
   m_TagString: Untagged
@@ -34,12 +35,42 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1175166080061654}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.18, y: 1.725, z: -0.19664147}
+  m_LocalPosition: {x: 0.214, y: 2.319, z: -0.19664147}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &60926402760093754
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1175166080061654}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.38, y: 0.38}
+    newSize: {x: 0.38, y: 0.38}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.19, y: 0.19}
+      - {x: -0.19, y: 0.04}
+      - {x: 0.041275635, y: 0.042141676}
+      - {x: 0.04, y: -0.19}
+      - {x: 0.19, y: -0.19}
+      - {x: 0.19, y: 0.19}
 --- !u!212 &212346388105120956
 SpriteRenderer:
   m_ObjectHideFlags: 1

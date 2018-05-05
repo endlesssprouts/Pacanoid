@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4188205212000436}
   - component: {fileID: 212819123708485616}
+  - component: {fileID: 61135695935606416}
   m_Layer: 0
   m_Name: WallNeon
   m_TagString: Untagged
@@ -34,12 +35,37 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1943970502047360}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.019238228, y: 0.034863096, z: -0.19664147}
+  m_LocalPosition: {x: 0.26083446, y: 0.55989105, z: -0.36920255}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61135695935606416
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1943970502047360}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.36, y: 0.15}
+    newSize: {x: 0.36, y: 0.15}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.36, y: 0.15}
+  m_EdgeRadius: 0
 --- !u!212 &212819123708485616
 SpriteRenderer:
   m_ObjectHideFlags: 1
