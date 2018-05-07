@@ -2301,9 +2301,10 @@ Prefab:
       propertyPath: m_Name
       value: Ball Chomp
       objectReference: {fileID: 0}
-    - target: {fileID: 1595347773905280, guid: 34546f596ef444b499070e71ecb0bf33, type: 2}
-      propertyPath: m_TagString
-      value: Player
+    - target: {fileID: 114108174105954078, guid: 34546f596ef444b499070e71ecb0bf33,
+        type: 2}
+      propertyPath: speed
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34546f596ef444b499070e71ecb0bf33, type: 2}
@@ -6863,8 +6864,8 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -1.9500883, y: 1.7417982}
-      - {x: -1.9456453, y: 1.146795}
+    - - {x: -1.8945901, y: 1.7713972}
+      - {x: -1.891997, y: 1.1449451}
       - {x: -1.295969, y: 1.1137432}
       - {x: -1.294033, y: 0.5297215}
       - {x: -0.69968754, y: 0.49479413}

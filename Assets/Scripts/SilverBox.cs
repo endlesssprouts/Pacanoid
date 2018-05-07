@@ -26,7 +26,7 @@ public class SilverBox : MonoBehaviour
         if (coll.gameObject.tag == "Player")
         {
             this.takeAHit();
-            Debug.Log("BoxHit");
+            //Debug.Log("BoxHit");
         }
 
     }

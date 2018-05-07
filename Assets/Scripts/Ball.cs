@@ -10,7 +10,7 @@ public class Ball : MonoBehaviour
 
 	private void Update()
 	{
-		Debug.Log(this._rigidbody2D.velocity);
+		//Debug.Log(this._rigidbody2D.velocity);
 	}
 
 	private void Awake()
