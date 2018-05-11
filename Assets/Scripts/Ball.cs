@@ -8,11 +8,6 @@ public class Ball : MonoBehaviour
 
 	private Rigidbody2D _rigidbody2D;
 
-	private void Update()
-	{
-		//Debug.Log(this._rigidbody2D.velocity);
-	}
-
 	private void Awake()
 	{
 		this._rigidbody2D = this.GetComponent<Rigidbody2D>();

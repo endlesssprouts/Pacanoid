@@ -3,53 +3,46 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BallManTransform : MonoBehaviour {
+public class BallManTransform : MonoBehaviour
+{
+	public enum PlayerMode { Ball, ChompMan }
 
-    public GameObject Chomp;
-    public SpriteRenderer BallSprite;
-    public Rigidbody2D BallChomp;
+	public GameObject Chomp;
+	public SpriteRenderer BallSprite;
+	public Rigidbody2D BallChomp;
 
-    public PlayerMode CurrentMode;
+	private PlayerMode _currentMode = PlayerMode.Ball;
+	public PlayerMode _CurrentMode { get { return this._currentMode; } }
 
-	// Use this for initialization
-	void Start () {
-        CurrentMode = PlayerMode.Ball;
+	[SerializeField] private LayerMask _transformationLayerMask;
+
+	private void OnTriggerEnter2D(Collider2D other)
+	{
+		if ((this._transformationLayerMask & (1 << other.gameObject.layer)) > 0)
+			this.TranformToChomp();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	private void OnTriggerExit2D(Collider2D other)
+	{
+		if ((this._transformationLayerMask & (1 << other.gameObject.layer)) > 0)
+			this.TranformToBall();
 	}
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Neon"))
-            TranformToChomp();
-    }
-
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Neon"))
-            TranformToBall();
-    }
-
-    private void TranformToChomp()
-    {
-        Chomp.SetActive(true);
-        BallSprite.enabled = false;
-        CurrentMode = PlayerMode.ChompMan;
-        BallChomp.velocity = Vector3.zero;
-    }
+	private void TranformToChomp()
+	{
+		Chomp.SetActive(true);
+		BallSprite.enabled = false;
+		_currentMode = PlayerMode.ChompMan;
+		BallChomp.velocity = Vector3.zero;
+	}
 
 
-    private void TranformToBall()
-    {
-        Chomp.SetActive(false);
-        BallSprite.enabled = true;
-        CurrentMode = PlayerMode.Ball;
-        Vector3 dropForce = new Vector3(-0.1f, -3f, 0f);
-        BallChomp.velocity = dropForce;
-    }
+	private void TranformToBall()
+	{
+		Chomp.SetActive(false);
+		BallSprite.enabled = true;
+		_currentMode = PlayerMode.Ball;
+		Vector3 dropForce = new Vector3(-0.1f, -3f, 0f);
+		BallChomp.velocity = dropForce;
+	}
 }
-
-public enum PlayerMode { Ball, ChompMan };
