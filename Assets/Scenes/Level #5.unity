@@ -356,6 +356,11 @@ Prefab:
       propertyPath: m_Name
       value: EndNeon (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 61287199360877178, guid: b7ea99660c939426aa7dad89b91c34b3,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.06
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7ea99660c939426aa7dad89b91c34b3, type: 2}
   m_IsPrefabParent: 0
@@ -2239,6 +2244,11 @@ Prefab:
       propertyPath: m_Name
       value: WallNeon (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 61135695935606416, guid: fce5c08a69e0c429584519111f18db5d,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.06
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fce5c08a69e0c429584519111f18db5d, type: 2}
   m_IsPrefabParent: 0
@@ -3922,6 +3932,11 @@ Prefab:
     - target: {fileID: 1634252940746918, guid: b7ea99660c939426aa7dad89b91c34b3, type: 2}
       propertyPath: m_Name
       value: EndNeon (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 61287199360877178, guid: b7ea99660c939426aa7dad89b91c34b3,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.08
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 61621122073948612, guid: b7ea99660c939426aa7dad89b91c34b3, type: 2}
@@ -11473,7 +11488,7 @@ Prefab:
     - target: {fileID: 61854197294558852, guid: a3a838fb6986f314daaa0b2e7de2da2d,
         type: 2}
       propertyPath: m_Size.y
-      value: 0.5
+      value: 0.47
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a3a838fb6986f314daaa0b2e7de2da2d, type: 2}
@@ -11964,6 +11979,11 @@ Prefab:
     - target: {fileID: 1634252940746918, guid: b7ea99660c939426aa7dad89b91c34b3, type: 2}
       propertyPath: m_Name
       value: EndNeon (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 61287199360877178, guid: b7ea99660c939426aa7dad89b91c34b3,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.06
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7ea99660c939426aa7dad89b91c34b3, type: 2}
@@ -16293,6 +16313,11 @@ Prefab:
     - target: {fileID: 1894504301013940, guid: 08e2866a80a0ec145b375719de258c45, type: 2}
       propertyPath: m_Name
       value: CornerNeon
+      objectReference: {fileID: 0}
+    - target: {fileID: 61143231611439946, guid: 08e2866a80a0ec145b375719de258c45,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.28
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08e2866a80a0ec145b375719de258c45, type: 2}
