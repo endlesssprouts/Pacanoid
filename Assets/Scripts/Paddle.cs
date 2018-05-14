@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Paddle : MonoBehaviour
 {
@@ -14,7 +15,12 @@ public class Paddle : MonoBehaviour
 		float movementDistance = Input.GetAxisRaw("Horizontal") * this._paddleMovementSpeed * Time.deltaTime;
 
 		this.transform.position = new Vector3(Mathf.Clamp(this.transform.position.x + movementDistance, this._minXPosition, this._maxXPosition), this.transform.position.y, this.transform.position.z);
-	}
+	
+        if (PacanoidSceneManager.Lives <= 0){
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        }
+    }
 
 #if UNITY_EDITOR
 	[Header("Editor Only")]

@@ -33,6 +33,7 @@ TextureImporter:
     21300052: Ghost1
     21300054: DownGhost1
     21300056: Pill
+    21300058: Life
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -538,6 +539,20 @@ TextureImporter:
         y: 56
         width: 10
         height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Life
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 136
+        width: 32
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
