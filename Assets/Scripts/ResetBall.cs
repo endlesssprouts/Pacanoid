@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // A script to return the Ball to the Paddle's position
 
@@ -38,6 +39,13 @@ public class ResetBall : MonoBehaviour {
         {
             ballScript.resetBall();
             PacanoidSceneManager.Lives--;
-        }
+
+			if (PacanoidSceneManager.Lives <= 0)
+			{
+				SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+				PacanoidSceneManager.Lives = 3;
+			}
+		}
     }
 }

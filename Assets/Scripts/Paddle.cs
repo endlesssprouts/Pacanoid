@@ -15,16 +15,12 @@ public class Paddle : MonoBehaviour
 		float movementDistance = Input.GetAxisRaw("Horizontal") * this._paddleMovementSpeed * Time.deltaTime;
 
 		this.transform.position = new Vector3(Mathf.Clamp(this.transform.position.x + movementDistance, this._minXPosition, this._maxXPosition), this.transform.position.y, this.transform.position.z);
-	
-        if (PacanoidSceneManager.Lives <= 0){
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
-        }
-    }
+	}
 
 #if UNITY_EDITOR
 	[Header("Editor Only")]
-	[SerializeField] private float _indicatorHeight = 0.85f;
+	[SerializeField]
+	private float _indicatorHeight = 0.85f;
 
 	private void OnDrawGizmosSelected()
 	{
@@ -41,12 +37,12 @@ public class Paddle : MonoBehaviour
 		);
 
 		Gizmos.DrawLine(
-			new Vector3(this._minXPosition, this.transform.position.y - this._indicatorHeight / 2f, this.transform.position.z), 
+			new Vector3(this._minXPosition, this.transform.position.y - this._indicatorHeight / 2f, this.transform.position.z),
 			new Vector3(this._minXPosition, this.transform.position.y + this._indicatorHeight / 2f, this.transform.position.z)
 		);
 
 		Gizmos.DrawLine(
-			new Vector3(this._maxXPosition, this.transform.position.y - this._indicatorHeight / 2f, this.transform.position.z), 
+			new Vector3(this._maxXPosition, this.transform.position.y - this._indicatorHeight / 2f, this.transform.position.z),
 			new Vector3(this._maxXPosition, this.transform.position.y + this._indicatorHeight / 2f, this.transform.position.z)
 		);
 	}
