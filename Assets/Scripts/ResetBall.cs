@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // A script to return the Ball to the Paddle's position
 
@@ -25,7 +26,7 @@ public class ResetBall : MonoBehaviour {
     {
         if (other.CompareTag("OutOfBounds") )
         {
-            ballScript.resetBall();
+            ballScript.ResetBall();
             //posX = paddle.transform.position.x;
             //posY = paddle.transform.position.y;
             //this.transform.position = new  Vector2(posX , posY + 0.1f);
@@ -36,8 +37,15 @@ public class ResetBall : MonoBehaviour {
     {
         if (other.CompareTag("OutOfBounds"))
         {
-            ballScript.resetBall();
+            ballScript.ResetBall();
             PacanoidSceneManager.Lives--;
-        }
+
+			if (PacanoidSceneManager.Lives <= 0)
+			{
+				SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+				PacanoidSceneManager.Lives = 3;
+			}
+		}
     }
 }
