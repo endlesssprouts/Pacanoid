@@ -1384,6 +1384,10 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1595347773905280, guid: 34546f596ef444b499070e71ecb0bf33, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114580482341321512, guid: 34546f596ef444b499070e71ecb0bf33, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 34546f596ef444b499070e71ecb0bf33, type: 2}
@@ -5636,9 +5640,9 @@ Transform:
   - {fileID: 1092703509}
   - {fileID: 963323587}
   - {fileID: 475055334}
+  - {fileID: 1671267826}
   - {fileID: 2118700743}
   - {fileID: 1469141870}
-  - {fileID: 1671267826}
   - {fileID: 1319803785}
   - {fileID: 695011850}
   - {fileID: 937380517}
@@ -6310,6 +6314,16 @@ Prefab:
     - target: {fileID: 4484681877940956, guid: 3faeeed5cc1696c46b1b2819f9083a89, type: 2}
       propertyPath: m_RootOrder
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 61241759818906316, guid: 3faeeed5cc1696c46b1b2819f9083a89,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -1.0576476
+      objectReference: {fileID: 0}
+    - target: {fileID: 61241759818906316, guid: 3faeeed5cc1696c46b1b2819f9083a89,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 2.3052952
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3faeeed5cc1696c46b1b2819f9083a89, type: 2}

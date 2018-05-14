@@ -19,13 +19,13 @@ public class BallManTransform : MonoBehaviour
 	private void OnTriggerEnter2D(Collider2D other)
 	{
 		if ((this._transformationLayerMask & (1 << other.gameObject.layer)) > 0)
-			this.TranformToChomp();
+            Invoke("TranformToChomp", 0.1f);
 	}
 
 	private void OnTriggerExit2D(Collider2D other)
 	{
 		if ((this._transformationLayerMask & (1 << other.gameObject.layer)) > 0)
-			this.TranformToBall();
+            Invoke("TranformToBall", 0.1f);
 	}
 
 	private void TranformToChomp()
