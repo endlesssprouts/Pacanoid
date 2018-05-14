@@ -26,7 +26,7 @@ public class ResetBall : MonoBehaviour {
     {
         if (other.CompareTag("OutOfBounds") )
         {
-            ballScript.resetBall();
+            ballScript.ResetBall();
             //posX = paddle.transform.position.x;
             //posY = paddle.transform.position.y;
             //this.transform.position = new  Vector2(posX , posY + 0.1f);
@@ -37,7 +37,7 @@ public class ResetBall : MonoBehaviour {
     {
         if (other.CompareTag("OutOfBounds"))
         {
-            ballScript.resetBall();
+            ballScript.ResetBall();
             PacanoidSceneManager.Lives--;
 
 			if (PacanoidSceneManager.Lives <= 0)
