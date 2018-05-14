@@ -17,13 +17,11 @@ public class Ball : MonoBehaviour
 	private void Start()
 	{
 		this._rigidbody2D.velocity = this._initialForce;
-		this._initialPosition = transform.position;
 	}
 
 	public void ResetBall()
 	{
 		this._rigidbody2D.velocity = this._initialForce;
-		this._rigidbody2D.position = this._initialPosition;
 	}
 
 	[SerializeField] private LayerMask _hitLayerMask;
@@ -32,7 +30,7 @@ public class Ball : MonoBehaviour
 	{
 		if ((this._hitLayerMask & (1 << collision.gameObject.layer)) > 0)
 		{
-			this._rigidbody2D.AddForce(new Vector3(Random.value, Random.value, 0));
+			this._rigidbody2D.velocity = Quaternion.Euler(new Vector3(0f, 0f, Random.Range(-30, 30))) * this._rigidbody2D.velocity;
 		}
 	}
 }

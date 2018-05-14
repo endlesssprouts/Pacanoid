@@ -3,5 +3,5 @@ using System.Collections;
 
 public class PacanoidSceneManager : MonoBehaviour
 {
-	public static int Lives = 3;
+	public static int Lives = 300;
 }
