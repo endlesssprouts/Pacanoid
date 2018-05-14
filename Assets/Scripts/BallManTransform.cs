@@ -18,8 +18,8 @@ public class BallManTransform : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if ((this._transformationLayerMask & (1 << other.gameObject.layer)) > 0)
-			this.TranformToChomp();
+        if ((this._transformationLayerMask & (1 << other.gameObject.layer)) > 0)
+            this.TranformToChomp();
 	}
 
 	private void OnTriggerExit2D(Collider2D other)
@@ -33,8 +33,9 @@ public class BallManTransform : MonoBehaviour
 		Chomp.SetActive(true);
 		BallSprite.enabled = false;
 		_currentMode = PlayerMode.ChompMan;
-		BallChomp.velocity = Vector3.zero;
-	}
+        BallChomp.velocity = Vector3.zero;
+
+    }
 
 
 	private void TranformToBall()
@@ -43,6 +44,7 @@ public class BallManTransform : MonoBehaviour
 		BallSprite.enabled = true;
 		_currentMode = PlayerMode.Ball;
 		Vector3 dropForce = new Vector3(-0.1f, -3f, 0f);
-		BallChomp.velocity = dropForce;
+        BallChomp.velocity = dropForce;
 	}
+
 }
