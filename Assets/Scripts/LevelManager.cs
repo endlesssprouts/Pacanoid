@@ -14,6 +14,8 @@ public static class LevelManager
 	{
 		if (SceneManager.GetActiveScene().buildIndex + 1 < SceneManager.sceneCount)
 		{
+			GameController.ObjectivesCount = 0;
+
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 		}
 	}
@@ -22,6 +24,8 @@ public static class LevelManager
 	{
 		if (SceneManager.GetActiveScene().buildIndex - 1 >= 0)
 		{
+			GameController.ObjectivesCount = 0;
+
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
 		}
 	}

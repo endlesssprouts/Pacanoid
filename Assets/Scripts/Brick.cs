@@ -12,6 +12,11 @@ public class Brick : MonoBehaviour
 
 	[SerializeField] private LayerMask _hitLayerMask;
 
+	private void Start()
+	{
+		GameController.ObjectivesCount++;
+	}
+
 	public void TakeDamage()
 	{
 		this._hitPoints--;
@@ -19,6 +24,8 @@ public class Brick : MonoBehaviour
 		if (this._hitPoints <= 0)
 		{
 			Destroy(this.gameObject, this._destroyDelay);
+
+			GameController.ObjectivesCount--;
 		}
 	}
 
@@ -27,6 +34,11 @@ public class Brick : MonoBehaviour
 		if ((this._hitLayerMask & (1 << coll.gameObject.layer)) > 0)
 		{
 			this.TakeDamage();
+		}
+
+		if (GameController.ObjectivesCount <= 0)
+		{
+			LevelManager.LoadNextLevel();
 		}
 	}
 }
